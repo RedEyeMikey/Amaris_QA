@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.time.Duration;
+
 public class Utils {
     public static WebDriver driver;
 
@@ -37,6 +39,9 @@ public class Utils {
     }
     public String getString (By locator){
         return find(locator).getText();
+    }
+    public void waitPage (int time){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
     }
     public String toString(Object object){
         return object.toString();

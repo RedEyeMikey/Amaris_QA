@@ -5,6 +5,7 @@ import Test.PaymentTest;
 import Test.RegisterTest;
 import Test.ShoppingTest;
 import Utils.Utils;
+import Utils.JSUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,6 +14,7 @@ import static Utils.Utils.driver;
 
 public class BaseTest {
     protected Utils utils;
+    protected JSUtils jsUtils;
     protected LoginTest loginTest;
     protected RegisterTest registerTest;
     protected PaymentTest paymentTest;
