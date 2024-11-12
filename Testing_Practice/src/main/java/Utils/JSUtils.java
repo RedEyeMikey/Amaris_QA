@@ -5,7 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 
 public class JSUtils extends Utils {
     JavascriptExecutor js = (JavascriptExecutor) driver;
-    public void scrollToElement(By element){
-        js.executeScript("arguments[0].scrollIntoView(true);",element);
+    public void scrollToElement(By locator){
+        js.executeScript("arguments[0].scrollIntoView(true);",locator);
     }
 }

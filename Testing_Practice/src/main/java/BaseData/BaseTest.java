@@ -1,11 +1,7 @@
 package BaseData;
 
-import Test.LoginTest;
-import Test.PaymentTest;
-import Test.RegisterTest;
-import Test.ShoppingTest;
-import Utils.Utils;
 import Utils.JSUtils;
+import Utils.Utils;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,25 +9,16 @@ import org.testng.annotations.BeforeClass;
 import static Utils.Utils.driver;
 
 public class BaseTest {
+    private final String DemoQA_URL = "https://demoqa.com/";
     protected Utils utils;
     protected JSUtils jsUtils;
-    protected LoginTest loginTest;
-    protected RegisterTest registerTest;
-    protected PaymentTest paymentTest;
-    protected ShoppingTest shoppingTest;
-    private final String DemoQA_URL = "https://demoqa.com/";
 
     @BeforeClass
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         utils = new Utils();
-        loginTest = new LoginTest();
-        registerTest = new RegisterTest();
-        paymentTest = new PaymentTest();
-        shoppingTest = new ShoppingTest();
-
-
+        jsUtils = new JSUtils();
     }
 
     @AfterClass
