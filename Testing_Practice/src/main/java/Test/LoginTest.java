@@ -7,12 +7,14 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest{
     String loginUrl = "https://practice.automationtesting.in/my-account/";
-    private By username = By.id("username");
-    private By password = By.id("password");
-    private By submitButton = By.xpath("//input[@type='submit']");
-    private By errorMessage = By.xpath("//ul[@class='woocommerce-error']//li");
-    private By lostPassword = By.linkText("Lost your password?");
-    private By resetPasswordButton = By.xpath("//input[@class='woocommerce-Button button']");
+
+
+    private final By username = By.id("username");
+    private final By password = By.id("password");
+    private final By submitButton = By.xpath("//input[@type='submit']");
+    private final By errorMessage = By.xpath("//ul[@class='woocommerce-error']//li");
+    private final By lostPassword = By.linkText("Lost your password?");
+    private final By resetPasswordButton = By.xpath("//input[@class='woocommerce-Button button']");
 
     @BeforeMethod
     public void loadApplication(){
